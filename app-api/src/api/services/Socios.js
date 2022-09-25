@@ -31,43 +31,43 @@ module.exports = {
       cpf: "666.666.666-66",
     },
   ],
-  getAllSocios: async function () {
+  getAll: async function () {
     return this.socios;
   },
-  updateSocio: async function (socioToUpdate) {
+  update: async function (data) {
     let index;
     let socio = this.socios.filter((socio, i) => {
-      if (socio.id == socioToUpdate.id) {
+      if (socio.id == data.id) {
         index = i;
         return true;
       }
       return false;
     });
     if (socio.length > 0) {
-      this.socios[index] = socioToUpdate;
+      this.socios[index] = data;
     }
     return this.socios[index];
   },
-  addSocio: async function (socioToAdd) {
+  add: async function (data) {
     let index;
     let socio = this.socios.filter((socio, i) => {
-      if (socio.id == socioToAdd.id) {
+      if (socio.id == data.id) {
         index = i;
         return true;
       }
       return false;
     });
     if (socio.length === 0) {
-      index = this.socios.push(socioToAdd) - 1;
+      index = this.socios.push(data) - 1;
     }
     console.log(index);
 
     return this.socios[index];
   },
-  findSocioById: async function (socioID) {
+  findById: async function (id) {
     let index;
     let socio = this.socios.filter((socio, i) => {
-      if (socio.id == socioID) {
+      if (socio.id == id) {
         index = i;
         return true;
       }
@@ -75,10 +75,10 @@ module.exports = {
     });
     return socio[0];
   },
-  deleteById: async function (socioID) {
+  deleteById: async function (id) {
     let index;
     let socio = this.socios.filter((socio, i) => {
-      if (socio.id != socioID) {
+      if (socio.id != id) {
         index = i;
         return true;
       }
