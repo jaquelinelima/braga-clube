@@ -1,16 +1,23 @@
 const express = require("express");
 const cors = require("cors");
-const router = require("./routes/routes")
+const areaDeLazerRouter = require("./routes/area-de-lazer");
+const socioRouter = require("./routes/socio");
 const app = express();
 
 //Configuração dos middlewares
 app.use(cors());
-app.use(router)
+app.use(express.json());
+app.use((req, res, next) => {
+  console.info(`${req.method} - ${req.originalUrl}`);
+  next();
+});
+app.use(areaDeLazerRouter);
+app.use(socioRouter);
 
 //Configuração das rotas da API
-app.get("/", (req, res) =>{
-    res.send("Express server");
-    res.end();
+app.get("/", (req, res) => {
+  res.send("Express server");
+  res.end();
 });
 
 //Exporta o aplicativo express configurado
