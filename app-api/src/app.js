@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const areaDeLazerRouter = require("./routes/area-de-lazer");
-const socioRouter = require("./routes/socio");
+const areaDeLazerRouter = require("./api/routes/area-de-lazer");
+const socioRouter = require("./api/routes/socio");
 const app = express();
 
 //Configuração dos middlewares
