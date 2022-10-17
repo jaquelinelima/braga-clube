@@ -1,4 +1,4 @@
-const SociosService = require("../services/Socios");
+const SociosService = require("../services/SociosService");
 module.exports = {
   listAll: function (req, res) {
     res.statusCode = 200;

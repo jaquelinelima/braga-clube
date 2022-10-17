@@ -1,11 +1,10 @@
-const database = require("./database/database");
-const AreaDeLazer = require("./database/models/AreaDeLazer");
-const AreaDeLazerSeed = require("./database/seed/AreaDeLazerSeed");
+const database = require("./models/database/database");
+const AreaDeLazer = require("./models/AreaDeLazer");
+const AreaDeLazerSeed = require("./seeders/AreaDeLazerSeed");
 class AreaDeLazerRepository {
   constructor() {
     // Quando definirmos o ORM, precisaremos adicionar o model aqui.
-    // this.model = ItemPatrimonioModel;
-    AreaDeLazerSeed(database);
+    this.model = AreaDeLazer;
     this.database = database;
   }
   all() {
