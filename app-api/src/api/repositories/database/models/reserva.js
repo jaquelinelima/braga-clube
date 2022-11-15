@@ -42,7 +42,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: "Reserva",
-      freezeTableName: true,
     }
   );
   return Reserva;

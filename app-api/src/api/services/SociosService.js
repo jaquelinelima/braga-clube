@@ -1,4 +1,4 @@
-const { Socio } = require("../../database/models");
+const { Socio } = require("../repositories/database/models");
 
 module.exports = {
   getAllSocios: async function () {

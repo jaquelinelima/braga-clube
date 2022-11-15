@@ -1,4 +1,4 @@
-const { AreaDeLazer } = require("../../database/models");
+const { AreaDeLazer } = require("../repositories/database/models");
 
 module.exports = {
   getAllAreasDeLazer: async function () {

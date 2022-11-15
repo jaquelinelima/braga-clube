@@ -1,4 +1,4 @@
-const { Reserva } = require("../../database/models");
+const { Reserva } = require("../repositories/database/models");
 
 module.exports = {
   getAllReservas: async function () {
