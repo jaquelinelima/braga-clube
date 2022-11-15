@@ -1,9 +1,44 @@
 [
   {
+    "name": "admin",
+    "path": "/admin",
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\braga-clube\\\\app-front\\\\pages\\\\admin.vue",
+    "chunkName": "pages/admin",
+    "_name": "_fe3485da"
+  },
+  {
+    "name": "cadastro",
+    "path": "/cadastro",
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\braga-clube\\\\app-front\\\\pages\\\\cadastro.vue",
+    "chunkName": "pages/cadastro",
+    "_name": "_7e057425"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\braga-clube\\\\app-front\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_191e0c2d"
+  },
+  {
+    "name": "login1",
+    "path": "/login1",
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\braga-clube\\\\app-front\\\\pages\\\\login1.vue",
+    "chunkName": "pages/login1",
+    "_name": "_0aad0b54"
+  },
+  {
+    "name": "redefinir",
+    "path": "/redefinir",
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\braga-clube\\\\app-front\\\\pages\\\\redefinir.vue",
+    "chunkName": "pages/redefinir",
+    "_name": "_53e3c444"
+  },
+  {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\bragaclube\\\\braga-clube\\\\app-front\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\braga-clube\\\\app-front\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_17187c27"
+    "_name": "_4f766916"
   }
 ]

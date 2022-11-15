@@ -4,21 +4,32 @@
       <img class="imagem" src="../static/hero.png" alt="BragaClube Propaganda">
     </div>
     <div>
-      <p class="titulo">Home</p>
+      <p class="titulo">Criar Conta</p>
     </div>
-    <!-- <div class="nav">
+    <div class="nav">
       <b-form @submit="onSubmit" @reset="onReset" v-if="show">
         <b-form-group id="input-group-1" label-for="input-1">
+          <b-form-input id="input-1" v-model="form.email" type="email" placeholder="Nome completo..." required></b-form-input>
+        </b-form-group>
+        <b-form-group id="input-group-1" label-for="input-1">
+          <b-form-input id="input-1" v-model="form.email" type="email" placeholder="Data de nascimento..." required></b-form-input>
+        </b-form-group>
+        <b-form-group id="input-group-1" label-for="input-1">
+          <b-form-input id="input-1" v-model="form.email" type="email" placeholder="Número de telefone..." required></b-form-input>
+        </b-form-group>
+        <b-form-group id="input-group-1" label-for="input-1">
           <b-form-input id="input-1" v-model="form.email" type="email" placeholder="E-mail..." required></b-form-input>
+        </b-form-group>
+        <b-form-group id="input-group-1" label-for="input-1">
+          <b-form-input id="input-1" v-model="form.email" type="email" placeholder="Confirmação de e-mail..." required></b-form-input>
         </b-form-group>
         <b-form-group id="input-group-2" label-for="input-2">
           <b-form-input id="input-2" v-model="form.name" placeholder="Senha..." required></b-form-input>
         </b-form-group>
-        <p>Esqueci a senha.</p>
-        <b-button type="submit" variant="primary">Entrar</b-button>
-        <p>Não tem conta? <strong>Cadastre-se já.</strong></p>
+        <b-button @click="$router.push('/login')" type="submit" variant="primary">Criar Conta</b-button>
+        <p>Já tem uma conta? <strong @click="$router.push('/login')">Fazer login.</strong></p>
       </b-form>
-    </div> -->
+    </div>
     <div>
     </div>
   </div>
@@ -69,10 +80,10 @@
 <style>
 .titulo{
   position: absolute;
-  width: 142px;
+  width: 200px;
   height: 29px;
   left: 65px;
-  top: 200px;
+  top: 100px;
 
   font-size: 36px;
   line-height: 44px;
@@ -94,7 +105,7 @@
   width: 546px;
   height: 57px;
   left: 69px;
-  top: 250px;
+  top: 150px;
 }
 .nav_titulo{
   font-size: 24px;

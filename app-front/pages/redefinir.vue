@@ -4,21 +4,17 @@
       <img class="imagem" src="../static/hero.png" alt="BragaClube Propaganda">
     </div>
     <div>
-      <p class="titulo">Home</p>
+      <p class="titulo">Redefinir a senha</p>
     </div>
-    <!-- <div class="nav">
+    <div class="nav">
       <b-form @submit="onSubmit" @reset="onReset" v-if="show">
         <b-form-group id="input-group-1" label-for="input-1">
           <b-form-input id="input-1" v-model="form.email" type="email" placeholder="E-mail..." required></b-form-input>
         </b-form-group>
-        <b-form-group id="input-group-2" label-for="input-2">
-          <b-form-input id="input-2" v-model="form.name" placeholder="Senha..." required></b-form-input>
-        </b-form-group>
-        <p>Esqueci a senha.</p>
-        <b-button type="submit" variant="primary">Entrar</b-button>
-        <p>Não tem conta? <strong>Cadastre-se já.</strong></p>
+        <b-button type="submit" variant="primary">Confirmar</b-button>
+        <p><strong @click="$router.push('/')">Voltar ao ínicio.</strong></p>
       </b-form>
-    </div> -->
+    </div>
     <div>
     </div>
   </div>
@@ -69,7 +65,7 @@
 <style>
 .titulo{
   position: absolute;
-  width: 142px;
+  width: 400px;
   height: 29px;
   left: 65px;
   top: 200px;

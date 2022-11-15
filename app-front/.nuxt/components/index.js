@@ -1,5 +1,8 @@
-export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
-export { default as Tutorial } from '../..\\components\\Tutorial.vue'
+export { default as Aside } from '../..\\components\\aside.vue'
+export { default as Navbar } from '../..\\components\\navbar.vue'
+export { default as UserAsideAuth } from '../..\\components\\user\\asideAuth.vue'
+export { default as UserFormLogin } from '../..\\components\\user\\formLogin.vue'
+export { default as UserFormRedefinirSenha } from '../..\\components\\user\\formRedefinirSenha.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
