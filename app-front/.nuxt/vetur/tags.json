@@ -1,8 +1,17 @@
 {
-  "NuxtLogo": {
-    "description": "Auto imported from components/NuxtLogo.vue"
+  "Aside": {
+    "description": "Auto imported from components/aside.vue"
   },
-  "Tutorial": {
-    "description": "Auto imported from components/Tutorial.vue"
+  "Navbar": {
+    "description": "Auto imported from components/navbar.vue"
+  },
+  "UserAsideAuth": {
+    "description": "Auto imported from components/user/asideAuth.vue"
+  },
+  "UserFormLogin": {
+    "description": "Auto imported from components/user/formLogin.vue"
+  },
+  "UserFormRedefinirSenha": {
+    "description": "Auto imported from components/user/formRedefinirSenha.vue"
   }
 }

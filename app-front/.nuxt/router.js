@@ -4,7 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _17187c27 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _fe3485da = () => interopDefault(import('..\\pages\\admin.vue' /* webpackChunkName: "pages/admin" */))
+const _7e057425 = () => interopDefault(import('..\\pages\\cadastro.vue' /* webpackChunkName: "pages/cadastro" */))
+const _191e0c2d = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _0aad0b54 = () => interopDefault(import('..\\pages\\login1.vue' /* webpackChunkName: "pages/login1" */))
+const _53e3c444 = () => interopDefault(import('..\\pages\\redefinir.vue' /* webpackChunkName: "pages/redefinir" */))
+const _4f766916 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -18,8 +23,28 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/admin",
+    component: _fe3485da,
+    name: "admin"
+  }, {
+    path: "/cadastro",
+    component: _7e057425,
+    name: "cadastro"
+  }, {
+    path: "/login",
+    component: _191e0c2d,
+    name: "login"
+  }, {
+    path: "/login1",
+    component: _0aad0b54,
+    name: "login1"
+  }, {
+    path: "/redefinir",
+    component: _53e3c444,
+    name: "redefinir"
+  }, {
     path: "/",
-    component: _17187c27,
+    component: _4f766916,
     name: "index"
   }],
 

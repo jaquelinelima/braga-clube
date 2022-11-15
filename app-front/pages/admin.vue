@@ -1,26 +1,41 @@
 <template>
   <div>
+    <NavbarComponent></NavbarComponent>
     <div>
-      <img class="imagem" src="../static/hero.png" alt="BragaClube Propaganda">
+      <b-navbar toggleable="lg" type="dark" variant="info">
+        <b-navbar-brand href="#">BragaClube</b-navbar-brand>
+
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+        <b-collapse id="nav-collapse" is-nav>
+
+          <!-- Right aligned nav items -->
+          <b-navbar-nav class="ml-auto">
+
+            <b-nav-item-dropdown right>
+              <!-- Using 'button-content' slot -->
+              <template #button-content>
+                <em>User</em>
+
+        <b-navbar-brand href="#">
+          <img src="https://placekitten.com/g/30/30" alt="Kitten" class="imagem">
+        </b-navbar-brand>
+              </template>
+              <b-dropdown-item href="#">Profile</b-dropdown-item>
+              <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+            </b-nav-item-dropdown>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
     </div>
     <div>
-      <p class="titulo">Home</p>
+      <p class="titulo">Titulo Generico pra cobrir espaço - Usuario</p>
     </div>
-    <!-- <div class="nav">
-      <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-        <b-form-group id="input-group-1" label-for="input-1">
-          <b-form-input id="input-1" v-model="form.email" type="email" placeholder="E-mail..." required></b-form-input>
-        </b-form-group>
-        <b-form-group id="input-group-2" label-for="input-2">
-          <b-form-input id="input-2" v-model="form.name" placeholder="Senha..." required></b-form-input>
-        </b-form-group>
-        <p>Esqueci a senha.</p>
-        <b-button type="submit" variant="primary">Entrar</b-button>
-        <p>Não tem conta? <strong>Cadastre-se já.</strong></p>
-      </b-form>
-    </div> -->
-    <div>
-    </div>
+    <div class="espacamento">
+  <b-button block variant="primary">Áreas de Lazer</b-button>
+  <b-button block variant="primary">Falar com BragaClube</b-button>
+  <b-button block variant="primary">Planos</b-button>
+</div>
   </div>
 </template>
 
@@ -29,9 +44,12 @@
   name: 'IndexPage'
 } -->
 <script>
+import NavbarComponent from '../components/navbar.vue'
   export default {
 
     name: 'IndexPage',
+  components: {
+NavbarComponent},
     data() {
       return {
         form: {
@@ -67,12 +85,12 @@
 </script>
 
 <style>
+.espacamento{
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 .titulo{
-  position: absolute;
-  width: 142px;
-  height: 29px;
-  left: 65px;
-  top: 200px;
 
   font-size: 36px;
   line-height: 44px;
@@ -83,11 +101,7 @@
   color: #000000;
 }
 .imagem {
-  position: fixed;
-  right: 0pt;
-  max-height: 100%;
-  max-width: 100%;
-  padding-right: 40px;
+  border-radius: 50px;
 }
 .nav{
   position: absolute;
