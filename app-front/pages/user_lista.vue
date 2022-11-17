@@ -1,3 +1,10 @@
+new Vue({
+  computed: {
+    count(){
+      return store.state.count
+    }
+  },
+  
 <template>
   <body>
     <div>
