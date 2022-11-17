@@ -1,0 +1,68 @@
+[
+  {
+    "name": "cadastro",
+    "path": "/cadastro",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\cadastro.vue",
+    "chunkName": "pages/cadastro"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\login.vue",
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "login1",
+    "path": "/login1",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\login1.vue",
+    "chunkName": "pages/login1"
+  },
+  {
+    "name": "redefinir",
+    "path": "/redefinir",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\redefinir.vue",
+    "chunkName": "pages/redefinir"
+  },
+  {
+    "name": "user_confirmacao",
+    "path": "/user_confirmacao",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_confirmacao.vue",
+    "chunkName": "pages/user_confirmacao"
+  },
+  {
+    "name": "user_contato",
+    "path": "/user_contato",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_contato.vue",
+    "chunkName": "pages/user_contato"
+  },
+  {
+    "name": "user_home",
+    "path": "/user_home",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_home.vue",
+    "chunkName": "pages/user_home"
+  },
+  {
+    "name": "user_lista",
+    "path": "/user_lista",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_lista.vue",
+    "chunkName": "pages/user_lista"
+  },
+  {
+    "name": "user_qrcode",
+    "path": "/user_qrcode",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_qrcode.vue",
+    "chunkName": "pages/user_qrcode"
+  },
+  {
+    "name": "user_reserva",
+    "path": "/user_reserva",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_reserva.vue",
+    "chunkName": "pages/user_reserva"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]

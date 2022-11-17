@@ -1,0 +1,749 @@
+
+# entidades
+#   administrador
+#       adm_id
+#       nome
+#       cargo
+
+#   socio
+#       socio_id
+#       nome
+#       cpf
+#   agendamento (socio <-> area de lazer)
+#       socio_id
+#       area_id
+#       data_horario_entrada
+#       data_horario_saida
+#   areas de lazer
+#       area_id  
+#       nome
+#       descricao
+
+
+
+
+openapi: 3.0.3
+info:
+  title:  Swagger BragaClube
+  description: |-
+    Especificação da API do BragaClube, uma aplicação para facilitar o agendamento e entrada dos sócios do clube nas áreas de lazer. 
+  version: 1.0.0
+tags:
+  - name: Áreas de lazer
+    description: Tudo sobre as áreas de lazer
+  - name: Sócios
+    description: Tudo sobre os sócios
+  - name: Reservas
+    description: Tudo sobre as reservas das áreas de lazer
+  - name: Administradores
+    description: Tudo sobre os admistradores
+paths:
+  /area-de-lazer:
+    get:
+      tags:
+        - Áreas de lazer
+      summary: Listar áreas de lazer
+      description: Retorna uma lista de áreas de lazer
+      responses:
+        '200':
+          description: Lista de áreas de lazer
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Area'          
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Area'   
+                xml: 
+                  name: areas
+                  wrapped : true
+        '400':
+          description: ID inválido enviado
+        '404':
+          description: Área de lazer não encontrada
+    put:
+      tags:
+        - Áreas de lazer
+      summary: Atualiza uma área de lazer existente
+      description: Atualiza uma área de lazer existente pelo id
+      requestBody:
+        description: Atualiza uma área de lazer existente
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Area'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Area'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Area'
+        required: true
+      responses:
+        '200':
+          description: Atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Area'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Area'
+        '400':
+          description: ID inválido enviado
+        '404':
+          description: Área não encontrada
+        '405':
+          description: Erro de validação
+    post:
+      tags:
+        - Áreas de lazer
+      summary: Adiciona uma nova área de lazer
+      description: Adiciona uma nova área de lazer
+      requestBody:
+        description: Adiciona uma nova área de lazer
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Area'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Area'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Area'
+        required: true
+      responses:
+        '200':
+          description: Área de lazer criada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Area'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Area'
+        '405':
+          description: Input inválido
+  /area-de-lazer/{areaID}:
+    get:
+      tags:
+        - Áreas de lazer
+      summary: Procurar área de lazer pelo ID
+      description: Retorna uma única área de lazer
+      parameters:
+        - name: areaID
+          in: path
+          description: ID da área de lazer a ser retornada
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Área de lazer encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Area'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Area'
+        '400':
+          description: ID inválido enviado
+        '404':
+          description: Área de lazer não encontrada
+    delete:
+      tags:
+        - Áreas de lazer
+      summary: Deleta uma área de lazer
+      description: Deleta uma área de lazer
+      parameters:
+        - name: areaID
+          in: path
+          description: ID da área de lazer a ser deletada
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '400':
+          description: ID inválido enviado
+
+  /socio:
+    get:
+      tags:
+        - Sócios
+      summary: Retorna os sócios cadastrados
+      description: Retorna os sócios cadastrados
+      responses:
+        '200':
+          description: Lista de sócios cadastrados
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Socio'   
+                xml: 
+                  name: socios
+                  wrapped : true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Socio'   
+                xml: 
+                  name: socios
+                  wrapped : true
+    post:
+      tags:
+        - Sócios
+      summary: Cadastra um novo sócio
+      description: Cadastra um novo sócio
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Socio'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Socio'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Socio'
+      responses:
+        '200':
+          description: sócio cadastrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Socio'
+        '405':
+          description: Input inválido
+          
+    put:
+      tags:
+        - Sócios
+      summary: Atualiza um sócio
+      description: Atualiza um sócio
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Socio'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Socio'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Socio'
+      responses:
+        '200':
+          description: sócio atualizado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Socio'
+        '400':
+          description: ID inválido enviado
+        '404':
+          description: Sócio não encontrado
+        '405':
+          description: Erro de validação
+  /socio/{socioId}:
+    get:
+      tags:
+        - Sócios
+      summary: Procurar sócio pelo ID
+      description: Procurar sócio pelo ID.
+      parameters:
+        - name: socioId
+          in: path
+          description: ID do sócio cadastrado
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Sócio encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Order'
+        '400':
+          description: ID inválido enviado
+        '404':
+          description: Sócio não encontrado
+    delete:
+      tags:
+        - Sócios
+      summary: Deletar um sócio por ID
+      description: Deletar um sócio por ID
+      parameters:
+        - name: socioId
+          in: path
+          description: ID do sócio a ser deletado
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '400':
+          description: ID inválido enviado
+        '404':
+          description: Sócio não encontrado
+  /reserva:
+    post:
+      tags:
+        - Reservas
+      summary: Cria uma nova reserva
+      description: Cria uma nova reserva
+      requestBody:
+        description: Cria uma nova reserva
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reserva'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Reserva'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reserva'
+      responses:
+        "200":
+          description: reserva criada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reserva'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Reserva'
+    put:
+      tags:
+        - Reservas
+      summary: Atualiza uma reserva
+      description: Atualiza uma reserva
+      requestBody:
+        description: Atualiza uma reserva
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reserva'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Reserva'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Reserva'
+      responses:
+        "200":
+          description: reserva atualizada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reserva'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Reserva'
+        '400':
+          description: ID inválido enviado
+        '404':
+          description: Reserva não encontrada
+        '405':
+          description: Erro de validação
+  /user/createWithList:
+    post:
+      tags:
+        - user
+      summary: Creates list of users with given input array
+      description: Creates list of users with given input array
+      operationId: createUsersWithListInput
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/User'
+        default:
+          description: successful operation
+  /user/login:
+    get:
+      tags:
+        - user
+      summary: Logs user into the system
+      description: ''
+      operationId: loginUser
+      parameters:
+        - name: username
+          in: query
+          description: The user name for login
+          required: false
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: The password for login in clear text
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          headers:
+            X-Rate-Limit:
+              description: calls per hour allowed by the user
+              schema:
+                type: integer
+                format: int32
+            X-Expires-After:
+              description: date in UTC when token expires
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/xml:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: Invalid username/password supplied
+  /user/logout:
+    get:
+      tags:
+        - user
+      summary: Logs out current logged in user session
+      description: ''
+      operationId: logoutUser
+      parameters: []
+      responses:
+        default:
+          description: successful operation
+  /user/{username}:
+    get:
+      tags:
+        - user
+      summary: Get user by user name
+      description: ''
+      operationId: getUserByName
+      parameters:
+        - name: username
+          in: path
+          description: 'The name that needs to be fetched. Use user1 for testing. '
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'          
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid username supplied
+        '404':
+          description: User not found
+    put:
+      tags:
+        - user
+      summary: Update user
+      description: This can only be done by the logged in user.
+      operationId: updateUser
+      parameters:
+        - name: username
+          in: path
+          description: name that need to be deleted
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Update an existent user in the store
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        default:
+          description: successful operation
+    delete:
+      tags:
+        - user
+      summary: Delete user
+      description: This can only be done by the logged in user.
+      operationId: deleteUser
+      parameters:
+        - name: username
+          in: path
+          description: The name that needs to be deleted
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: Invalid username supplied
+        '404':
+          description: User not found
+components:
+  schemas:
+    Order:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        petId:
+          type: integer
+          format: int64
+          example: 198772
+        quantity:
+          type: integer
+          format: int32
+          example: 7
+        shipDate:
+          type: string
+          format: date-time
+        status:
+          type: string
+          description: Order Status
+          example: approved
+          enum:
+            - placed
+            - approved
+            - delivered
+        complete:
+          type: boolean
+      xml:
+        name: order
+    Customer:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 100000
+        username:
+          type: string
+          example: fehguy
+        address:
+          type: array
+          xml:
+            name: addresses
+            wrapped: true
+          items:
+            $ref: '#/components/schemas/Address'
+      xml:
+        name: customer
+    Address:
+      type: object
+      properties:
+        street:
+          type: string
+          example: 437 Lytton
+        city:
+          type: string
+          example: Palo Alto
+        state:
+          type: string
+          example: CA
+        zip:
+          type: string
+          example: '94301'
+      xml:
+        name: address
+    Category:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1
+        name:
+          type: string
+          example: Dogs
+      xml:
+        name: category
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        username:
+          type: string
+          example: theUser
+        firstName:
+          type: string
+          example: John
+        lastName:
+          type: string
+          example: James
+        email:
+          type: string
+          example: john@email.com
+        password:
+          type: string
+          example: '12345'
+        phone:
+          type: string
+          example: '12345'
+        userStatus:
+          type: integer
+          description: User Status
+          format: int32
+          example: 1
+      xml:
+        name: user
+    Tag:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+      xml:
+        name: tag
+    Area:
+      required:
+        - nome
+        - descricao
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        nome:
+          type: string
+          example: Salão de festas
+        descricao:
+          type: string
+          example: Salão de festas do BragaClube
+      xml:
+        name: area
+    Socio:
+      required:
+        - nome
+        - cpf
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 14
+        nome:
+          type: string
+          example: Bruno Borelli
+        cpf:
+          type: string
+          example: 321.321.321-32
+      xml:
+        name: socio
+        
+    Reserva:
+      required:
+        - socioID
+        - areaID
+        - datahoraEntrada
+        - datahoraSaida
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 14
+        socioID:
+          type: integer
+          format: int64
+          example: 14
+        areaID:
+          type: integer
+          format: int64
+          example: 10
+        datahoraEntrada:
+          type: string
+          format: date-time
+          example: "2022-09-17T18:00:00.000Z"
+        datahoraSaida:
+          type: string
+          format: date-time
+          example: "2022-09-17T20:00:00.000Z"
+      xml:
+        name: socio
+    ApiResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
+      xml:
+        name: '##default'
+  requestBodies:
+    Area:
+      description: Objeto de área de lazer
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Area'
+        application/xml:
+          schema:
+            $ref: '#/components/schemas/Area'
+    UserArray:
+      description: List of user object
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/User'
+  securitySchemes:
+    petstore_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://petstore3.swagger.io/oauth/authorize
+          scopes:
+            write:pets: modify pets in your account
+            read:pets: read your pets
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
