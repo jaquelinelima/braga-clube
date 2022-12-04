@@ -4,6 +4,11 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _0693f963 = () => interopDefault(import('..\\pages\\adm_area.vue' /* webpackChunkName: "pages/adm_area" */))
+const _d46f868a = () => interopDefault(import('..\\pages\\adm_cadastro-area.vue' /* webpackChunkName: "pages/adm_cadastro-area" */))
+const _7747c470 = () => interopDefault(import('..\\pages\\adm_principal.vue' /* webpackChunkName: "pages/adm_principal" */))
+const _56325d91 = () => interopDefault(import('..\\pages\\adm_reservas.vue' /* webpackChunkName: "pages/adm_reservas" */))
+const _8b73fb4e = () => interopDefault(import('..\\pages\\adm_utilizacao.vue' /* webpackChunkName: "pages/adm_utilizacao" */))
 const _905a11cc = () => interopDefault(import('..\\pages\\cadastro.vue' /* webpackChunkName: "pages/cadastro" */))
 const _677f7558 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
 const _ef0e70ee = () => interopDefault(import('..\\pages\\login1.vue' /* webpackChunkName: "pages/login1" */))
@@ -28,6 +33,26 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/adm_area",
+    component: _0693f963,
+    name: "adm_area"
+  }, {
+    path: "/adm_cadastro-area",
+    component: _d46f868a,
+    name: "adm_cadastro-area"
+  }, {
+    path: "/adm_principal",
+    component: _7747c470,
+    name: "adm_principal"
+  }, {
+    path: "/adm_reservas",
+    component: _56325d91,
+    name: "adm_reservas"
+  }, {
+    path: "/adm_utilizacao",
+    component: _8b73fb4e,
+    name: "adm_utilizacao"
+  }, {
     path: "/cadastro",
     component: _905a11cc,
     name: "cadastro"
