@@ -15,7 +15,7 @@
               <b-nav-item-dropdown right>
                 <!-- Using 'button-content' slot -->
                 <template #button-content>
-                  <em>User</em>
+                  <em>Usuario</em>
   
           <b-navbar-brand href="#">
             <img src="https://placekitten.com/g/30/30" alt="Kitten" class="imagem">
