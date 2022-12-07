@@ -2,113 +2,91 @@
   {
     "name": "adm_area",
     "path": "/adm_area",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\adm_area.vue",
-    "chunkName": "pages/adm_area",
-    "_name": "_0693f963"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\adm_area.vue",
+    "chunkName": "pages/adm_area"
   },
   {
     "name": "adm_cadastro-area",
     "path": "/adm_cadastro-area",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\adm_cadastro-area.vue",
-    "chunkName": "pages/adm_cadastro-area",
-    "_name": "_d46f868a"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\adm_cadastro-area.vue",
+    "chunkName": "pages/adm_cadastro-area"
   },
   {
     "name": "adm_principal",
     "path": "/adm_principal",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\adm_principal.vue",
-    "chunkName": "pages/adm_principal",
-    "_name": "_7747c470"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\adm_principal.vue",
+    "chunkName": "pages/adm_principal"
   },
   {
     "name": "adm_reservas",
     "path": "/adm_reservas",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\adm_reservas.vue",
-    "chunkName": "pages/adm_reservas",
-    "_name": "_56325d91"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\adm_reservas.vue",
+    "chunkName": "pages/adm_reservas"
   },
   {
     "name": "adm_utilizacao",
     "path": "/adm_utilizacao",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\adm_utilizacao.vue",
-    "chunkName": "pages/adm_utilizacao",
-    "_name": "_8b73fb4e"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\adm_utilizacao.vue",
+    "chunkName": "pages/adm_utilizacao"
   },
   {
     "name": "cadastro",
     "path": "/cadastro",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\cadastro.vue",
-    "chunkName": "pages/cadastro",
-    "_name": "_905a11cc"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\cadastro.vue",
+    "chunkName": "pages/cadastro"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\login.vue",
-    "chunkName": "pages/login",
-    "_name": "_677f7558"
-  },
-  {
-    "name": "login1",
-    "path": "/login1",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\login1.vue",
-    "chunkName": "pages/login1",
-    "_name": "_ef0e70ee"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\login.vue",
+    "chunkName": "pages/login"
   },
   {
     "name": "redefinir",
     "path": "/redefinir",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\redefinir.vue",
-    "chunkName": "pages/redefinir",
-    "_name": "_53c69fef"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\redefinir.vue",
+    "chunkName": "pages/redefinir"
   },
   {
     "name": "user_confirmacao",
     "path": "/user_confirmacao",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_confirmacao.vue",
-    "chunkName": "pages/user_confirmacao",
-    "_name": "_1cc9af06"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\user_confirmacao.vue",
+    "chunkName": "pages/user_confirmacao"
   },
   {
     "name": "user_contato",
     "path": "/user_contato",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_contato.vue",
-    "chunkName": "pages/user_contato",
-    "_name": "_209ac597"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\user_contato.vue",
+    "chunkName": "pages/user_contato"
   },
   {
     "name": "user_home",
     "path": "/user_home",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_home.vue",
-    "chunkName": "pages/user_home",
-    "_name": "_4ce86642"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\user_home.vue",
+    "chunkName": "pages/user_home"
   },
   {
     "name": "user_lista",
     "path": "/user_lista",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_lista.vue",
-    "chunkName": "pages/user_lista",
-    "_name": "_e8c9c0a0"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\user_lista.vue",
+    "chunkName": "pages/user_lista"
   },
   {
     "name": "user_qrcode",
     "path": "/user_qrcode",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_qrcode.vue",
-    "chunkName": "pages/user_qrcode",
-    "_name": "_6512deb1"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\user_qrcode.vue",
+    "chunkName": "pages/user_qrcode"
   },
   {
     "name": "user_reserva",
     "path": "/user_reserva",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\user_reserva.vue",
-    "chunkName": "pages/user_reserva",
-    "_name": "_b79495b6"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\user_reserva.vue",
+    "chunkName": "pages/user_reserva"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\ktsim\\\\Desktop\\\\braga-clube-main\\\\app-front\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_c4505b7e"
+    "component": "C:\\\\Users\\\\jaque\\\\Desktop\\\\braga-clube\\\\app-front\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
   }
 ]

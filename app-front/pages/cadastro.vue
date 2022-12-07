@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background-color: #f2f2f2">
     <div>
       <img class="imagem" src="../static/hero.png" alt="BragaClube Propaganda">
     </div>
@@ -24,10 +24,10 @@
           <b-form-input id="input-1" v-model="form.email" type="email" placeholder="Confirmação de e-mail..." required></b-form-input>
         </b-form-group>
         <b-form-group id="input-group-2" label-for="input-2">
-          <b-form-input id="input-2" v-model="form.name" placeholder="Senha..." required></b-form-input>
+          <b-form-input id="input-2" v-model="form.password" type="password" placeholder="Senha..." required></b-form-input>
         </b-form-group>
-        <b-button @click="$router.push('/login')" type="submit" variant="primary">Criar Conta</b-button>
-        <p>Já tem uma conta? <strong @click="$router.push('/login')">Fazer login.</strong></p>
+        <b-button @click="$router.push('/login')" class="botao" type="submit">Criar Conta</b-button>
+        <p class="text">Já tem uma conta? <strong @click="$router.push('/login')">Fazer login.</strong></p>
       </b-form>
     </div>
     <div>
@@ -50,6 +50,9 @@
           name: '',
           food: null,
           checked: []
+        },
+        type: {
+          password: '',
         },
         foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
         show: true
@@ -133,5 +136,16 @@ botao{
   top: 550.73px;
   background: #7C2CFF;
   border-radius: 8px;
+}
+.botao{
+  background-color: #7C2CFF;
+  border-radius: 8px;
+  width: 500px;
+}
+.text{
+  color: #A1A1A1 !important;
+  text-align: center !important;
+  align-items: center !important;
+  margin-top: 15px;
 }
 </style>

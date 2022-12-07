@@ -4,22 +4,21 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0693f963 = () => interopDefault(import('..\\pages\\adm_area.vue' /* webpackChunkName: "pages/adm_area" */))
-const _d46f868a = () => interopDefault(import('..\\pages\\adm_cadastro-area.vue' /* webpackChunkName: "pages/adm_cadastro-area" */))
-const _7747c470 = () => interopDefault(import('..\\pages\\adm_principal.vue' /* webpackChunkName: "pages/adm_principal" */))
-const _56325d91 = () => interopDefault(import('..\\pages\\adm_reservas.vue' /* webpackChunkName: "pages/adm_reservas" */))
-const _8b73fb4e = () => interopDefault(import('..\\pages\\adm_utilizacao.vue' /* webpackChunkName: "pages/adm_utilizacao" */))
-const _905a11cc = () => interopDefault(import('..\\pages\\cadastro.vue' /* webpackChunkName: "pages/cadastro" */))
-const _677f7558 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
-const _ef0e70ee = () => interopDefault(import('..\\pages\\login1.vue' /* webpackChunkName: "pages/login1" */))
-const _53c69fef = () => interopDefault(import('..\\pages\\redefinir.vue' /* webpackChunkName: "pages/redefinir" */))
-const _1cc9af06 = () => interopDefault(import('..\\pages\\user_confirmacao.vue' /* webpackChunkName: "pages/user_confirmacao" */))
-const _209ac597 = () => interopDefault(import('..\\pages\\user_contato.vue' /* webpackChunkName: "pages/user_contato" */))
-const _4ce86642 = () => interopDefault(import('..\\pages\\user_home.vue' /* webpackChunkName: "pages/user_home" */))
-const _e8c9c0a0 = () => interopDefault(import('..\\pages\\user_lista.vue' /* webpackChunkName: "pages/user_lista" */))
-const _6512deb1 = () => interopDefault(import('..\\pages\\user_qrcode.vue' /* webpackChunkName: "pages/user_qrcode" */))
-const _b79495b6 = () => interopDefault(import('..\\pages\\user_reserva.vue' /* webpackChunkName: "pages/user_reserva" */))
-const _c4505b7e = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _a926443e = () => interopDefault(import('..\\pages\\adm_area.vue' /* webpackChunkName: "pages/adm_area" */))
+const _ee54f406 = () => interopDefault(import('..\\pages\\adm_cadastro-area.vue' /* webpackChunkName: "pages/adm_cadastro-area" */))
+const _4e74580a = () => interopDefault(import('..\\pages\\adm_principal.vue' /* webpackChunkName: "pages/adm_principal" */))
+const _62e8d30f = () => interopDefault(import('..\\pages\\adm_reservas.vue' /* webpackChunkName: "pages/adm_reservas" */))
+const _73351057 = () => interopDefault(import('..\\pages\\adm_utilizacao.vue' /* webpackChunkName: "pages/adm_utilizacao" */))
+const _5cabdb98 = () => interopDefault(import('..\\pages\\cadastro.vue' /* webpackChunkName: "pages/cadastro" */))
+const _434f119a = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages/login" */))
+const _4a0a4b31 = () => interopDefault(import('..\\pages\\redefinir.vue' /* webpackChunkName: "pages/redefinir" */))
+const _2afeaefb = () => interopDefault(import('..\\pages\\user_confirmacao.vue' /* webpackChunkName: "pages/user_confirmacao" */))
+const _2d513b15 = () => interopDefault(import('..\\pages\\user_contato.vue' /* webpackChunkName: "pages/user_contato" */))
+const _432c1184 = () => interopDefault(import('..\\pages\\user_home.vue' /* webpackChunkName: "pages/user_home" */))
+const _5dccdcae = () => interopDefault(import('..\\pages\\user_lista.vue' /* webpackChunkName: "pages/user_lista" */))
+const _4dce7d1a = () => interopDefault(import('..\\pages\\user_qrcode.vue' /* webpackChunkName: "pages/user_qrcode" */))
+const _9e27aaba = () => interopDefault(import('..\\pages\\user_reserva.vue' /* webpackChunkName: "pages/user_reserva" */))
+const _79a76e83 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -34,67 +33,63 @@ export const routerOptions = {
 
   routes: [{
     path: "/adm_area",
-    component: _0693f963,
+    component: _a926443e,
     name: "adm_area"
   }, {
     path: "/adm_cadastro-area",
-    component: _d46f868a,
+    component: _ee54f406,
     name: "adm_cadastro-area"
   }, {
     path: "/adm_principal",
-    component: _7747c470,
+    component: _4e74580a,
     name: "adm_principal"
   }, {
     path: "/adm_reservas",
-    component: _56325d91,
+    component: _62e8d30f,
     name: "adm_reservas"
   }, {
     path: "/adm_utilizacao",
-    component: _8b73fb4e,
+    component: _73351057,
     name: "adm_utilizacao"
   }, {
     path: "/cadastro",
-    component: _905a11cc,
+    component: _5cabdb98,
     name: "cadastro"
   }, {
     path: "/login",
-    component: _677f7558,
+    component: _434f119a,
     name: "login"
   }, {
-    path: "/login1",
-    component: _ef0e70ee,
-    name: "login1"
-  }, {
     path: "/redefinir",
-    component: _53c69fef,
+    component: _4a0a4b31,
     name: "redefinir"
   }, {
     path: "/user_confirmacao",
-    component: _1cc9af06,
+    component: _2afeaefb,
     name: "user_confirmacao"
   }, {
     path: "/user_contato",
-    component: _209ac597,
+    component: _2d513b15,
     name: "user_contato"
   }, {
     path: "/user_home",
-    component: _4ce86642,
+    component: _432c1184,
     name: "user_home"
   }, {
     path: "/user_lista",
-    component: _e8c9c0a0,
+    component: _5dccdcae,
     name: "user_lista"
   }, {
     path: "/user_qrcode",
-    component: _6512deb1,
+    component: _4dce7d1a,
     name: "user_qrcode"
   }, {
     path: "/user_reserva",
-    component: _b79495b6,
+    component: _9e27aaba,
     name: "user_reserva"
   }, {
     path: "/",
-    component: _c4505b7e,
+    component: _79a76e83,
     name: "index"
   }],
 

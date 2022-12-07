@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background-color: #f2f2f2">
     <div>
       <img class="imagem" src="../static/hero.png" alt="BragaClube Propaganda">
     </div>
@@ -8,60 +8,50 @@
     </div>
     <div class="nav">
       <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-        <b-form-group id="input-group-1" label-for="input-1">
-          <b-form-input id="input-1" v-model="form.email" type="email" placeholder="E-mail..." required></b-form-input>
+        <b-form-group class="input"  id="input-group-1" label-for="input-1">
+          <b-form-input id="input-1" class="input" v-model="form.email" type="email" placeholder="E-mail..." required></b-form-input>
         </b-form-group>
         <b-form-group id="input-group-2" label-for="input-2">
-          <b-form-input id="input-2" v-model="form.name" placeholder="Senha..." required></b-form-input>
+          <b-form-input id="input-2" v-model="form.password" type="password" placeholder="Senha..." required></b-form-input>
         </b-form-group>
-        <p @click="$router.push('/redefinir')"><u>Esqueci a senha.</u></p>
-        <b-button type="submit" variant="primary">Entrar</b-button>
-        <p>Não tem conta? <strong @click="$router.push('/cadastro')">Cadastre-se já.</strong></p>
+        <p @click="$router.push('/redefinir')" class="esqueci"><u>Esqueci a senha.</u></p>
+        <b-button type="submit" class="botao" variant="primary">Entrar</b-button>
+        <p class="text center">Não tem conta? <strong @click="$router.push('/cadastro')">Cadastre-se já.</strong></p>
       </b-form>
     </div>
   </div>
 </template>
-
-<!-- <script> -->
-<!-- export default {
-  name: 'IndexPage'
-} -->
 <script>
-  export default {
-
-    name: 'IndexPage',
-    data() {
-      return {
-        form: {
-          email: '',
-          name: '',
-          food: null,
-          checked: []
-        },
-        foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
-        show: true
-      }
-    },
-    methods: {
-      onSubmit(event) {
-        event.preventDefault()
-        alert(JSON.stringify(this.form))
+export default {
+  name: 'LoginPage',
+  data() {
+    return {
+      form: {
+        email: '',
+        password: ''
       },
-      onReset(event) {
-        event.preventDefault()
-        // Reset our form values
-        this.form.email = ''
-        this.form.name = ''
-        this.form.food = null
-        this.form.checked = []
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
-      }
+      type: {
+        password: ''
+      },
+      show: true
+    }
+  },
+  methods: {
+    onSubmit(event) {
+      event.preventDefault()
+      alert(JSON.stringify(this.form))
+    },
+    onReset(event) {
+      event.preventDefault()
+      this.form.email = ''
+      this.form.password = ''
+      this.show = false
+      this.$nextTick(() => {
+        this.show = true
+      })
     }
   }
+}
 </script>
 
 <style>
@@ -71,13 +61,11 @@
   height: 29px;
   left: 65px;
   top: 200px;
-
   font-size: 36px;
   line-height: 44px;
   display: flex;
   align-items: center;
   text-align: center;
-
   color: #000000;
 }
 .imagem {
@@ -112,13 +100,23 @@
   color: #000000;
   margin: 0 10px 5px 5px;
 }
-botao{
-  position: absolute;
-  width: 546.21px;
-  height: 52.89px;
-  left: 68.79px;
-  top: 550.73px;
-  background: #7C2CFF;
+.botao{
+  background-color: #7C2CFF;
   border-radius: 8px;
+  width: 500px;
+}
+.esqueci{
+  margin-top: -15px;
+  color: #A1A1A1 !important;
+  align-items: right !important;
+  text-align: right !important;
+}
+.text{
+  color: #A1A1A1 !important;
+  text-align: center;
+  margin-top: 5px;
+}
+.input{
+width: 500px !important;
 }
 </style>

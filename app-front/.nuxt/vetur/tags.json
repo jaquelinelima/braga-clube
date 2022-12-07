@@ -2,6 +2,9 @@
   "Aside": {
     "description": "Auto imported from components/aside.vue"
   },
+  "Footer": {
+    "description": "Auto imported from components/footer.vue"
+  },
   "Navbar": {
     "description": "Auto imported from components/navbar.vue"
   },
@@ -13,9 +16,6 @@
   },
   "UserAsideAuth": {
     "description": "Auto imported from components/user/asideAuth.vue"
-  },
-  "UserFormLogin": {
-    "description": "Auto imported from components/user/formLogin.vue"
   },
   "UserFormRedefinirSenha": {
     "description": "Auto imported from components/user/formRedefinirSenha.vue"
