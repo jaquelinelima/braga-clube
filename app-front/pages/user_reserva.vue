@@ -55,10 +55,17 @@
   </template>
   
   <script>
+  import api from '../src/api';
   import NavbarComponent from '../components/navbar.vue'
     export default {
   
-      name: 'IndexPage',
+      mounted(){
+        api.get('/reservas').then(response =>{
+          console.log(response.data);
+        });
+    },
+
+    name: 'IndexPage',
     components: {
   NavbarComponent},
       data() {

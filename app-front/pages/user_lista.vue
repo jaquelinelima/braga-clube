@@ -63,9 +63,11 @@ new Vue({
 </template>
 
 <script>
+  
 import NavbarComponent from '../components/navbar.vue'
   export default {
 
+     
     name: 'IndexPage',
   components: {
 NavbarComponent},
@@ -81,6 +83,7 @@ NavbarComponent},
         show: true
       }
     },
+
     methods: {
       onSubmit(event) {
         event.preventDefault()
