@@ -16,6 +16,7 @@ const _2afeaefb = () => interopDefault(import('..\\pages\\user_confirmacao.vue' 
 const _2d513b15 = () => interopDefault(import('..\\pages\\user_contato.vue' /* webpackChunkName: "pages/user_contato" */))
 const _432c1184 = () => interopDefault(import('..\\pages\\user_home.vue' /* webpackChunkName: "pages/user_home" */))
 const _5dccdcae = () => interopDefault(import('..\\pages\\user_lista.vue' /* webpackChunkName: "pages/user_lista" */))
+const _1f48bccf = () => interopDefault(import('..\\pages\\user_lista12.vue' /* webpackChunkName: "pages/user_lista12" */))
 const _4dce7d1a = () => interopDefault(import('..\\pages\\user_qrcode.vue' /* webpackChunkName: "pages/user_qrcode" */))
 const _9e27aaba = () => interopDefault(import('..\\pages\\user_reserva.vue' /* webpackChunkName: "pages/user_reserva" */))
 const _79a76e83 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
@@ -79,6 +80,10 @@ export const routerOptions = {
     path: "/user_lista",
     component: _5dccdcae,
     name: "user_lista"
+  }, {
+    path: "/user_lista12",
+    component: _1f48bccf,
+    name: "user_lista12"
   }, {
     path: "/user_qrcode",
     component: _4dce7d1a,
