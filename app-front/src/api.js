@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-const api = axios.create({
-    baseURL:'localhost:8080/api/reservas'
+export default () => axios.create({
+    baseURL:'localhost:3000/api',
 })
-
-export default api;
